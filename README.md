@@ -4,7 +4,7 @@
 An Android RAT that written in completely C# by me (qH0sT a.k.a Sagopa K)  
 I ❤️ C# :)
 
-Minumum Android Version: 4.0  
+Minumum Android Version: 4.1  
 Maximum Android Version: 9.0  
 
 Tested on some systems:  
