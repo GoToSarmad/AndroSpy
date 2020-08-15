@@ -42,7 +42,7 @@ AndroSpy Project aims to most powerful-stable-useful open source Android RAT.
 <img src="https://user-images.githubusercontent.com/45147475/89323471-6a93e980-d68e-11ea-8d6a-5b72f246fadc.PNG" width="18%"></img>
 
 # [+]Update 1.3 (First stable Update)  
-+Added "Add Shortcut" option into the Fun Manager.  
++Added "Add Shortcut to home screen" option into the Fun Manager.  
 +Added Name of Phone Number into the Window that is showed when Incall or Outgoing Call starts in any Victim.  
 +a Correction in SMS Manager.
   
