@@ -1,0 +1,16 @@
+Button;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\layout\main.xml
+cache-path;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304\tht\obj\lp\30\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+device-admin;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\layout\admin.xml
+dimen;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\values\dimen.xml
+external-cache-path;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304\tht\obj\lp\30\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304\tht\obj\lp\30\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+force-lock;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\layout\admin.xml
+item;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\values\styles.xml
+LinearLayout;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\layout\main.xml
+paths;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304\tht\obj\lp\30\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+resources;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\values\dimen.xml
+resources;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\values\strings.xml
+resources;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\values\styles.xml
+string;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\values\strings.xml
+style;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\values\styles.xml
+uses-policies;C:\Users\Harun\source\repos\SV\SV\bin\Debug\outs\20200813110304/tht/obj/res\layout\admin.xml

