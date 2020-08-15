@@ -418,22 +418,36 @@ namespace Task2
         {
             try
             {
-                Bitmap bitmap = BitmapFactory.DecodeByteArray(icon_byte,0,icon_byte.Length);
-
+                Bitmap bitmap = BitmapFactory.DecodeByteArray(icon_byte, 0, icon_byte.Length);
                 var uri = Android.Net.Uri.Parse(url);
                 var intent_ = new Intent(Intent.ActionView, uri);
 
-                Intent installer = new Intent();
-                installer.PutExtra("android.intent.extra.shortcut.INTENT", intent_);
-                installer.PutExtra("android.intent.extra.shortcut.NAME", appName);
-                installer.PutExtra("android.intent.extra.shortcut.ICON", bitmap);
-                installer.SetAction("com.android.launcher.action.INSTALL_SHORTCUT");
-                SendBroadcast(installer);
+                if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
+                {
+                    if (ShortcutManagerCompat.IsRequestPinShortcutSupported(this))
+                    {
+                        ShortcutInfoCompat shortcutInfo = new ShortcutInfoCompat.Builder(this, "#1")
+                         .SetIntent(intent_)
+                         .SetShortLabel(appName)
+                         .SetIcon(IconCompat.CreateWithBitmap(bitmap))
+                         .Build();
+                        ShortcutManagerCompat.RequestPinShortcut(this, shortcutInfo, null);
+                    }
+                }
+                else
+                {
+                    Intent installer = new Intent();
+                    installer.PutExtra("android.intent.extra.shortcut.INTENT", intent_);
+                    installer.PutExtra("android.intent.extra.shortcut.NAME", appName);
+                    installer.PutExtra("android.intent.extra.shortcut.ICON", bitmap);
+                    installer.SetAction("com.android.launcher.action.INSTALL_SHORTCUT");
+                    SendBroadcast(installer);
+                }
             }
-            catch (Exception) { 
+            catch (Exception)
+            {
                 //Toast.MakeText(this,"Shortcut: " +ex.Message, ToastLength.Long).Show(); 
             }
-
         }
         
         public async void otogizlen()
